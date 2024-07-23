@@ -15,7 +15,7 @@ dataset/
 │ ├── Blur/RGB/
 ```
 ## Model Weight
-The upstream task is our Blur Magnitude Estimator, you can download model weight from this repo [BME](https://github.com/Jin-Ting-He/BME)
+The upstream task is our Blur Magnitude Estimator, you can get the details and download model weight from this repo [BME](https://github.com/Jin-Ting-He/BME)
 
 ## Run
 you need to replace the path in main.py line 108 - 113
