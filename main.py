@@ -3,6 +3,7 @@ import os
 import torch
 import numpy as np
 import json
+import random
 from torch.utils.data import DataLoader
 from BME.dataset.dataloader import BlurMagDataset
 from BME.model.bme_model import MyNet_Res50_multiscale
@@ -75,7 +76,12 @@ class RSDM():
                 print(f"The Number of Sharp Regions: {len(temp_list)}")
                 self.output_dict['sharp_regions'].extend(temp_list)
                 break
-            
+
+            if(mask_threshold < 1e-5):
+                print(f"Threshold is too small! Random get {num_data}")
+                self.output_dict['sharp_regions'].extend(random.sample(temp_list, num_data))
+                break
+
             if len(temp_list) > num_data:
                 upper_bound = mask_threshold
             else:
