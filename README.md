@@ -18,7 +18,7 @@ dataset/
 The upstream task is our Blur Magnitude Estimator, you can get the details and download model weight from this repo [BME](https://github.com/Jin-Ting-He/BME)
 
 ## Run
-you need to replace the path in main.py line 108 - 113
+you need to replace the path in main.py line 114 - 119
 ```bash
 python main.py
 ```
